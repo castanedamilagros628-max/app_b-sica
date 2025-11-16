@@ -1,13 +1,30 @@
-def sumar_lista(numeros):
-    total = 0
-    for n in numeros:
-        total += n
-    return total
+# calculo.py
 
-def promedio(numeros):
-    if len(numeros) == 0:
-        return 0
-    return sumar_lista(numeros) / len(numeros)
+x = 10
+y = 0
+resultado = 0
 
-valores = [10, 20, 30]
-print("Promedio:", promedio(valores))
+def SumaNumeros(a, b):
+    return a+b
+
+def promedio(lista):
+    suma = 0
+    for i in range(0, len(lista)):
+        suma = suma + lista[i]
+    prom = suma / len(lista)  # posible división entre cero
+    return prom
+
+def imprimirResultados():
+    datos = [15, 10, 8, 20, 5, 30]
+    print("Promedio es: ", promedio(datos))
+    print("Suma total: ", SumaNumeros(5, 10))
+    z = 100  # variable no usada
+
+def Calcular():
+    print("Iniciando cálculo...")
+    imprimirResultados()
+    print("Fin del cálculo")
+
+if __name__ == "__main__":
+    Calcular()
+
